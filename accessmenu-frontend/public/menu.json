@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "name": "Burger",
+      "description": "Juicy beef burger with cheese",
+      "image": "burger.jpg",
+      "allergens": ["Gluten", "Dairy"],
+      "signVideo": "https://www.signingsavvy.com/media2/mp4-ld/28/28240.mp4"
+
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "description": "Cheesy pizza with pepperoni",
+      "image": "pizza.jpg",
+      "allergens": ["Gluten", "Dairy"],
+      "signVideo": "https://media.spreadthesign.com/video/mp4/1/10745.mp4"
+
+    },
+    {
+      "id": 3,
+      "name": "Salad",
+      "description": "Fresh vegetable salad",
+      "image": "salad.jpg",
+      "allergens": ["None"],
+      "signVideo": "https://media.spreadthesign.com/video/mp4/1/11301.mp4"
+
+    }
+  ]
+  
