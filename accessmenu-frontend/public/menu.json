@@ -1,30 +1,146 @@
 [
-    {
-      "id": 1,
-      "name": "Burger",
-      "description": "Juicy beef burger with cheese",
-      "image": "burger.jpg",
-      "allergens": ["Gluten", "Dairy"],
-      "signVideo": "https://www.signingsavvy.com/media2/mp4-ld/28/28240.mp4"
-
-    },
-    {
-      "id": 2,
-      "name": "Pizza",
-      "description": "Cheesy pizza with pepperoni",
-      "image": "pizza.jpg",
-      "allergens": ["Gluten", "Dairy"],
-      "signVideo": "https://media.spreadthesign.com/video/mp4/1/10745.mp4"
-
-    },
-    {
-      "id": 3,
-      "name": "Salad",
-      "description": "Fresh vegetable salad",
-      "image": "salad.jpg",
-      "allergens": ["None"],
-      "signVideo": "https://media.spreadthesign.com/video/mp4/1/11301.mp4"
-
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Burger",
+    "description": "Juicy beef burger with cheese",
+    "image": "burger.jpg",
+    "allergens": ["Gluten", "Dairy"],
+    "signVideo": "https://www.signingsavvy.com/media2/mp4-ld/28/28240.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "description": "Cheesy pizza with pepperoni",
+    "image": "pizza.jpg",
+    "allergens": ["Gluten", "Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/10745.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 3,
+    "name": "Salad",
+    "description": "Fresh vegetable salad",
+    "image": "salad.jpg",
+    "allergens": ["None"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/11301.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 4,
+    "name": "Fish",
+    "description": "Grilled fish fillet served with lemon and herbs",
+    "image": "fish.jpg",
+    "allergens": ["Fish"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/9039.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 5,
+    "name": "Pasta",
+    "description": "Pasta with tomato sauce and parmesan cheese",
+    "image": "Pasta.png",
+    "allergens": ["Gluten", "Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/10527.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 6,
+    "name": "Sushi",
+    "description": "Assorted sushi rolls with rice, seaweed, and fish",
+    "image": "suchi.png",
+    "allergens": ["Fish", "Soy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/270035.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 7,
+    "name": "Rice",
+    "description": "Steamed white rice, perfect as a side dish",
+    "image": "Rice.webp",
+    "allergens": ["None"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/11301.mp4",
+    "category": "Dinner"
+  },
+  {
+    "id": 8,
+    "name": "Pancakes",
+    "description": "Fluffy pancakes with maple syrup",
+    "image": "Pancakes.jpg",
+    "allergens": ["Gluten", "Eggs", "Dairy"],
+    "signVideo": "https://media.signbsl.com/videos/bsl/signmonkey/mp4/pancake.mp4",
+    "category": "Breakfast"
+  },
+  {
+    "id": 9,
+    "name": "Omelette",
+    "description": "Egg omelette with cheese and herbs",
+    "image": "omelette.jpg",
+    "allergens": ["Eggs", "Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/10339.mp4",
+    "category": "Breakfast"
+  },
+  {
+    "id": 10,
+    "name": "Cereal",
+    "description": "Crunchy cereal with milk",
+    "image": "cereal.jpeg",
+    "allergens": ["Gluten", "Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/7895.mp4",
+    "category": "Breakfast"
+  },
+  {
+    "id": 11,
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice",
+    "image": "orange-juice.jpg",
+    "allergens": ["None"],
+    "signVideo": "https://media.signbsl.com/videos/bsl/signstation/orange%20juice.mp4",
+    "category": "Drinks"
+  },
+  {
+    "id": 12,
+    "name": "Coffee",
+    "description": "Hot black coffee",
+    "image": "coffee.jpeg",
+    "allergens": ["None"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/8202.mp4",
+    "category": "Drinks"
+  },
+  {
+    "id": 13,
+    "name": "Milkshake",
+    "description": "Cold milkshake with vanilla flavor",
+    "image": "milkshake.jpeg",
+    "allergens": ["Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/10144.mp4",
+    "category": "Drinks"
+  },
+  {
+    "id": 14,
+    "name": "Ice Cream",
+    "description": "Vanilla ice cream with chocolate chips",
+    "image": "ice-cream.jpg",
+    "allergens": ["Dairy"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/9627.mp4",
+    "category": "Dessert"
+  },
+  {
+    "id": 15,
+    "name": "Chocolate Cake",
+    "description": "Moist chocolate cake with fudge frosting",
+    "image": "chocolate-cake.jpg",
+    "allergens": ["Gluten", "Eggs", "Dairy"],
+    "signVideo": "https://media.signbsl.com/videos/bsl/nf/mp4/Chocolate%20cake.mp4",
+    "category": "Dessert"
+  },
+  {
+    "id": 16,
+    "name": "Fruit Salad",
+    "description": "Mixed seasonal fruits",
+    "image": "fruit-salad.jpeg",
+    "allergens": ["None"],
+    "signVideo": "https://media.spreadthesign.com/video/mp4/1/9223.mp4",
+    "category": "Dessert"
+  }
+]

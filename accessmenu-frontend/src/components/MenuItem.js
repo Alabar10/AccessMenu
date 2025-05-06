@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 
 const allergenIcons = {
-    Gluten: "🌾",
-    Dairy: "🥛",
-    Nuts: "🥜",
-    Eggs: "🥚",
-    Fish: "🐟",
-    Soy: "🌱",
-    None: "✅"
-  };
+  Gluten: "🌾",
+  Dairy: "🥛",
+  Nuts: "🥜",
+  Eggs: "🥚",
+  Fish: "🐟",
+  Soy: "🌱",
+  None: "✅"
+};
 
-  
 function MenuItem({ name, description, image, allergens, signVideo }) {
   const [showSign, setShowSign] = useState(false);
 
@@ -28,13 +27,30 @@ function MenuItem({ name, description, image, allergens, signVideo }) {
   };
 
   return (
-    <div className="menu-card">
+    <div
+      className="menu-card"
+      tabIndex="0"
+      role="region"
+      aria-label={`Menu item: ${name}`}
+      style={{
+        border: "1px solid #ccc",
+        borderRadius: "12px",
+        padding: "15px",
+        marginBottom: "20px",
+        backgroundColor: "#fff",
+        maxWidth: "400px",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+      }}
+    >
       <img src={`/${image}`} alt={name} />
-      <div className="menu-card-content">
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <p style={{ fontSize: "12px", color: "red", marginTop: "10px" }}>
-          Allergens:{" "}
+
+
+      <div className="menu-card-content" style={{ marginTop: "12px" }}>
+        <h3 style={{ fontSize: "28px", lineHeight: "1.2" }}>{name}</h3>
+        <p style={{ fontSize: "18px", color: "#55555" }}>{description}</p>
+
+        <p style={{ fontSize: "20px", color: "#d00", marginTop: "10px" }}>
+          <strong>Allergens:</strong>{" "}
           {allergens.map((allergen, index) => (
             <span key={index}>
               {allergenIcons[allergen] || "⚠️"} {allergen}
@@ -42,52 +58,53 @@ function MenuItem({ name, description, image, allergens, signVideo }) {
             </span>
           ))}
         </p>
-        
-        <button
-          onClick={speakitem}
-          aria-label={`Read description of ${name}`}
-          style={{
-            marginTop: "10px",
-            padding: "5px 10px",
-            fontSize: "14px",
-            backgroundColor: "#007BFF",
-            color: "#fff",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer"
-          }}
-        >
-          🔊 Read
-        </button>
 
-        {signVideo && (
+        <div style={{ marginTop: "15px" }}>
           <button
-            onClick={toggleSignVideo}
-            style={{
-              marginLeft: "10px",
-              marginTop: "10px",
-              padding: "5px 10px",
-              fontSize: "14px",
-              backgroundColor: "#28a745",
-              color: "#fff",
-              border: "none",
-              borderRadius: "6px",
-              cursor: "pointer"
-            }}
+            onClick={speakitem}
+            aria-label={`Read aloud description of ${name}`}
+            style={buttonStyle("#007BFF")}
           >
-            ✋ Sign Language
+            🔊 Read
           </button>
-        )}
+
+          {signVideo && (
+            <button
+              onClick={toggleSignVideo}
+              aria-label={`Show sign language video for ${name}`}
+              style={{ ...buttonStyle("#28a745"), marginLeft: "10px" }}
+            >
+              ✋ Sign
+            </button>
+          )}
+        </div>
 
         {showSign && signVideo && (
-          <video width="100%" controls style={{ marginTop: "10px" }}>
+          <video
+            width="100%"
+            controls
+            aria-label={`Sign language video for ${name}`}
+            style={{ marginTop: "12px", borderRadius: "8px" }}
+          >
             <source src={signVideo} type="video/mp4" />
-            Sign language video not available.
+            Your browser does not support video playback.
           </video>
         )}
       </div>
     </div>
   );
+}
+
+function buttonStyle(color) {
+  return {
+    padding: "8px 16px",
+    fontSize: "16px",
+    backgroundColor: color,
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer"
+  };
 }
 
 export default MenuItem;
