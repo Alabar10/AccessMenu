@@ -10,7 +10,7 @@ const allergenIcons = {
   None: "✅"
 };
 
-function MenuItem({ name, description, image, allergens, signVideo }) {
+function MenuItem({ name, description, image, allergens = [], signVideo }) {
   const [showSign, setShowSign] = useState(false);
 
   const speakitem = () => {
@@ -42,22 +42,27 @@ function MenuItem({ name, description, image, allergens, signVideo }) {
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
       }}
     >
-      <img src={`/${image}`} alt={name} />
-
+      <img src={`/${image}`} alt={name} style={{ width: "100%", borderRadius: "8px" }} />
 
       <div className="menu-card-content" style={{ marginTop: "12px" }}>
         <h3 style={{ fontSize: "28px", lineHeight: "1.2" }}>{name}</h3>
-        <p style={{ fontSize: "18px", color: "#55555" }}>{description}</p>
+        <p style={{ fontSize: "18px", color: "#555" }}>{description}</p>
 
-        <p style={{ fontSize: "20px", color: "#d00", marginTop: "10px" }}>
-          <strong>Allergens:</strong>{" "}
-          {allergens.map((allergen, index) => (
-            <span key={index}>
-              {allergenIcons[allergen] || "⚠️"} {allergen}
-              {index < allergens.length - 1 && " - "}
-            </span>
-          ))}
-        </p>
+        {allergens.length > 0 ? (
+          <p style={{ fontSize: "20px", color: "#d00", marginTop: "10px" }}>
+            <strong>Allergens:</strong>{" "}
+            {allergens.map((allergen, index) => (
+              <span key={index}>
+                {allergenIcons[allergen] || "⚠️"} {allergen}
+                {index < allergens.length - 1 && " - "}
+              </span>
+            ))}
+          </p>
+        ) : (
+          <p style={{ fontSize: "20px", color: "#28a745", marginTop: "10px" }}>
+            <strong>Allergens:</strong> ✅ None
+          </p>
+        )}
 
         <div style={{ marginTop: "15px" }}>
           <button

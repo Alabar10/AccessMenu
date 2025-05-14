@@ -4,7 +4,7 @@
     "name": "Burger",
     "description": "Juicy beef burger with cheese",
     "image": "burger.jpg",
-    "allergens": ["Gluten", "Dairy"],
+    "allergens": ["Gluten", "Dairy", "Eggs", "Soy"],
     "signVideo": "https://www.signingsavvy.com/media2/mp4-ld/28/28240.mp4",
     "category": "Dinner"
   },
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "name": "Sushi",
+    "name": "suchi                       ",
     "description": "Assorted sushi rolls with rice, seaweed, and fish",
     "image": "suchi.png",
     "allergens": ["Fish", "Soy"],
